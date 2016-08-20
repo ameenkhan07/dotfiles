@@ -12,6 +12,7 @@ alias ptpy="ptpython"
 
 # Virtualenv
 alias venv="virtualenv"
+
 # Python 2 venv
 alias eac="source env/bin/activate"
 alias epy="env/bin/python"
@@ -26,8 +27,14 @@ alias pysrv="python3 -m http.server "
 
 #####################################################################
 
-# https://github.com/Diaoul/subliminal
-alias sub="subliminal -l en -- "
+# Hadoop Alias http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/
+unalias fs &> /dev/null
+alias fs="hadoop fs"
+unalias hls &> /dev/null
+alias hls="fs -ls"
+
+
+#####################################################################
 
 # https://github.com/rg3/youtube-dl/
 alias ytb="youtube-dl -ciw --no-mtime -f 18 --restrict-filenames -o '~/Videos/%(title)s.%(ext)s'"
@@ -37,17 +44,6 @@ alias ted="youtube-dl -ciw --no-mtime -f medium --restrict-filenames -o '~/Video
 alias vimeo="youtube-dl -ciw --no-mtime -f h264-sd --restrict-filenames -o '~/Videos/%(title)s.%(ext)s'"
 
 #####################################################################
-
-# cheat!
-ce() {
-    ( cd /mnt/Work/Github/cheat && cheat edit "$1" )
-}
-cs() {
-    ( cd /mnt/Work/Github/cheat && cheat show "$1" | less )
-}
-cc() {
-    ( cd /mnt/Work/Github/cheat && cheat show "$1" --copy "$2" )
-}
 
 # Quick Ping!
 alias pingu="ping 8.8.8.8"
@@ -96,27 +92,7 @@ alia apy  $anaconda/python
 alia apip $anaconda/pip
 alia aipy $anaconda/ipython
 
-# https://github.com/richrd/suplemon
-alia supl ~/dev/clones/suplemon/suplemon.py
-
-# http://github.com/dufferzafar/netuse
-alia netuse ~/dev/netuse/netuse.py
-
-# https://github.com/laurent22/massren
-alia massren ~/dev/clones/massren/massren
-
-# https://github.com/musicbrainz/picard/
-alia picard ~/dev/picard/tagger.py
-
-# https://github.com/MTG/acousticbrainz-client
-alia abzsubmit ~/dev/alpha/abzsubmit/env/bin/abzsubmit
-
 #####################################################################
-
-# Use locate to find files
-loki() {
-    locate -e -i "$@" | fzf
-}
 
 # Use the silversearcher to find text!
 agf() {
@@ -130,11 +106,6 @@ httpless() {
 
 curless() {
     curl -q -i -s "$@" | less -R
-}
-
-# Pass a request through mitmproxy!
-httm() {
-    http --proxy=http:http://localhost:8080 --proxy=https:http://localhost:8080 "$@" >/dev/null
 }
 
 ncm() {
