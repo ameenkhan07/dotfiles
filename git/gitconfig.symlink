@@ -16,8 +16,7 @@
         ui = true
 [core]
 	excludesfile = /home/ameen/.gitignore
-        editor = vim
-[apply]
+        editor = subl
         whitespace = nowarn
 [mergetool]
         keepBackup = false

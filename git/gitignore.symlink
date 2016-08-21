@@ -19,3 +19,6 @@ env/
 .ipynb_checkpoints
 
 *.pyc
+
+# SBT|Maven Target folders
+target/
