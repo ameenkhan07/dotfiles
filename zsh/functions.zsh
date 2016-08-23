@@ -1,3 +1,6 @@
+################################################################
+########################DUFFERNAMA##############################
+################################################################
 # Google stuff from the command-line
 google() {
     search=""
@@ -83,46 +86,3 @@ ctrl-enter () {
 }
 zle -N ctrl-enter
 bindkey "^J" ctrl-enter
-
-# fzit - fzf based git commit browser (enter for show, ctrl-d for diff, ` toggles sort)
-fzit() {
-  local out shas sha q k
-  while out=$(
-      git log --graph --color=always \
-          --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
-      fzf --ansi --multi --no-sort --reverse --query="$q" \
-          --print-query --expect=ctrl-d --toggle-sort=\`); do
-    q=$(head -1 <<< "$out")
-    k=$(head -2 <<< "$out" | tail -1)
-    shas=$(sed '1,2d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
-    [ -z "$shas" ] && continue
-    if [ "$k" = ctrl-d ]; then
-      git diff --color=always $shas | less -R
-    else
-      for sha in $shas; do
-        git show --color=always $sha | less -R
-      done
-    fi
-  done
-}
-
-pdfpages() {
-  for file in "$@"; do
-    echo $file
-    pdfinfo "$file" | grep -oP '(?<=Pages:          )[ A-Za-z0-9]*'
-  done
-}
-
-pdfex() {
-  qpdf --linearize "$1" --pages "$1" "$2-$3" -- "$4"
-}
-
-pyt3() {
-  local py="./venv/bin/python3.5"
-  run_pytest $*
-}
-
-pyt2() {
-  local py="./env/bin/python2.7"
-  run_pytest $*
-}

@@ -1,7 +1,5 @@
 alias reload!='. ~/.zshrc'
 
-alias cls='clear' # Good 'ol Clear Screen command
-
 #####################################################################
 
 # Python
@@ -20,10 +18,6 @@ alias epip="env/bin/pip"
 # Python 3 venv
 alias vpy="venv/bin/python"
 alias vpip="venv/bin/pip"
-
-# Serve a directory
-# TODO: Use devd?
-alias pysrv="python3 -m http.server "
 
 #####################################################################
 
@@ -45,20 +39,11 @@ alias vimeo="youtube-dl -ciw --no-mtime -f h264-sd --restrict-filenames -o '~/Vi
 
 #####################################################################
 
-# Quick Ping!
-alias pingu="ping 8.8.8.8"
-
 # Learn about a random command, whenever you feel like it.
 # Copied from: http://askubuntu.com/a/337382/415634
 bored() {
     cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1 | cut -d. -f1) $(whatis $(ls /bin | shuf -n 1) 2>/dev/null)
 }
-
-# jrnl
-alias jl="jrnl life"
-alias ji="jrnl idea"
-alias jw="jrnl work"
-alias jc="jrnl code"
 
 # apt-get
 alias aptg='sudo apt-get'
@@ -67,6 +52,8 @@ alias aptp='sudo apt-get purge'
 alias aptr='sudo apt-get remove'
 alias aptrp='sudo apt-get autoremove --purge'
 alias apts='apt-cache show'
+alias atpug="sudo apt-get upgrade"
+alias atpud="sudo apt-get update"
 
 # Misc.
 dus() {
@@ -94,10 +81,6 @@ alia aipy $anaconda/ipython
 
 #####################################################################
 
-# Use the silversearcher to find text!
-agf() {
-    ag -C 2 --color --group $@ | less -R
-}
 
 # Taken from: https://github.com/jkbrzt/httpie#redirected-output
 httpless() {
