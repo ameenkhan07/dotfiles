@@ -1,3 +1,21 @@
 .DS_Store
 *~
 *.swp
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# PyCharm
+.idea/
+
+# Python Virtualenv
+env/
+
+# Python Packages
+*.egg-info/
+
+# IPython Notebook Checkpoints
+.ipynb_checkpoints
+
+*.pyc
