@@ -1,10 +1,19 @@
-#CLI Apps
+# CLI Apps
 sudo apt-get install ranger
 sudo apt-get install vim
 sudo apt-get install emacs
 sudo apt-get install httpie
 sudo apt-get install rtorrent
 sudo apt-get install youtube-dl
+
+
+# SWAG
+sudo add-apt-repository ppa:numix/ppa
+sudo apt-get update
+sudo apt-get install numix-gtk-theme numix-icon-theme-circle
+sudo apt-get install numix-wallpaper-*
+sudo apt-get install unity-tweak-tool
+
 
 sudo apt-get install hexchat
 
@@ -13,9 +22,6 @@ sudo apt-get install python
 sudo apt-get install python3
 
 
-#Sass
-sudo apt-get install ruby
-sudo su -c "gem install sass"
 #  PIP Virtualenv Installs
 wget -O ~/Downloads/get_pip.py https://bootstrap.pypa.io/get-pip.py
 sudo python ./Downloads/get_pip.py
