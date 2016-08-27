@@ -44,7 +44,7 @@ chmod 0600 ~/.ssh/authorized_keys
 sudo mkdir -p /app/hadoop/tmp
 sudo chown hadoop /app/hadoop/tmp
 
-# Installign Hadoop
+# Installing Hadoop
 
 mkdir ~/Downloads/Hadoop/
 wget -O ~/Downloads/Hadoop/hadoop.tar.gz http://mirror.fibergrid.in/apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz
@@ -74,3 +74,6 @@ sudo mkdir /usr/local/Hbase/HFiles
 
 #Installing Apache Phoenix
 
+
+wget -O ~/Downloads/Hadoop/phoenix.tar.gz http://mirror.fibergrid.in/apache/phoenix/apache-phoenix-4.8.0-HBase-0.98/bin/apache-phoenix-4.8.0-HBase-0.98-bin.tar.gz
+tar zxvf ~/Downloads/Hadoop/phoenix.tar.gz -C ~/Downloads/Hadoop/
