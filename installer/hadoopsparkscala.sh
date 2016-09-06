@@ -17,10 +17,6 @@ sudo apt-get update && sudo apt-get install sbt
 
 # Installing Play_Scala  | Activator
 
-#Installing IntelliJ IDE (OPTIONAL)
-wget -O ~/Downloads/idea.tar.gz https://download.jetbrains.com/idea/ideaIU-2016.2.2.tar.gz
-tar xzf ~/Donwloads/idea.tar.gz
-
 #Installing Spark
 mkdir ~/Downloads/Spark/
 wget -O ~/Downloads/Spark/spark.tgz http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-hadoop2.7.tgz

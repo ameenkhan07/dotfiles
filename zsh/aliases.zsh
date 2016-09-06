@@ -58,8 +58,8 @@ alias aptp='sudo apt-get purge'
 alias aptr='sudo apt-get remove'
 alias aptrp='sudo apt-get autoremove --purge'
 alias apts='apt-cache show'
-alias atpug="sudo apt-get upgrade"
-alias atpud="sudo apt-get update"
+alias aptug="sudo apt-get upgrade"
+alias aptud="sudo apt-get update"
 
 # Misc.
 dus() {

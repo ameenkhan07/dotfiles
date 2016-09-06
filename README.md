@@ -39,6 +39,8 @@ There's a few special files in the hierarchy.
 Run these:
 
 ```sh
+sudo apt-get install zsh
+chsh -s $(which zsh) 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
