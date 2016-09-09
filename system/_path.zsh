@@ -6,3 +6,5 @@ export CONSCRIPT_OPTS="-XX:MaxPermSize=512M -Dfile.encoding=UTF-8"
 export PATH=$CONSCRIPT_HOME/bin:$PATH
 #Spark
 export PATH=$PATH:/usr/local/spark/bin
+#HBase
+export PATH=$PATH:/usr/local/HBase/bin/
