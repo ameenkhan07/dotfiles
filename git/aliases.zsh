@@ -1,13 +1,9 @@
-alias gl='git pull --prune'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-alias gp='git push origin HEAD'
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
 alias gcb='git copy-branch-name'
-alias gb='git branch'
-alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gac='git add -A && git commit -m'
 
 ####################################
@@ -48,51 +44,13 @@ alias grb="git rebase master"
 alias grbi="git rebase -i master"
 alias grbc="git rebase --continue"
 alias grbs="git rebase --skip"
-
 alias grv="git remote -vv"
-
 alias gru="git remote update"
-
-alias gs="git status -u"
-
 alias gsl="git shortlog -n -s"
-
 alias gst="git stash "
 alias gsts="git stash save"
 alias gsa="git stash apply"
 alias gsp="git stash pop"
 alias gstl="git stash list"
-
 alias gun="git reset --soft @~1"
-
 alias gwhat="git whatchanged --oneline"
-
-# Set the git date environment to any date
-# then make any ammends to change time!
-#
-# Usage:
-#
-# gdate `date --date='2 days ago'`
-# gdate reset
-function gdate {
-    if [[ -z $1 ]]; then
-        echo "Git date environment: " "$GIT_AUTHOR_DATE"
-    elif [[ $1 = "reset" ]]; then
-        unset GIT_AUTHOR_DATE
-        unset GIT_COMMITTER_DATE
-        echo "Git date environment reset."
-    else
-        export GIT_AUTHOR_DATE="$*"
-        export GIT_COMMITTER_DATE="$*"
-        echo "Git date environment set to:" "$*"
-    fi
-}
-
-# Go to the root directory of a git project
-function groot {
-    cd "$(git rev-parse --show-toplevel)"
-}
-
-function git-most {
-    git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -10
-}
