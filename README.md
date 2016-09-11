@@ -1,12 +1,7 @@
 # Dotfiles Source
 
-My dotfiles, using Holmans dotfiles as a starting point, oh-my-zsh for the sexy themes and plugins and whatnot and [duffers](https://github.com/dufferzafar/dotfiles) repo for inspiration, since I've been shamelessly using it for some time.
+My dotfiles based on [Holman Dotfiles Ideology](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/) uses Holmans dotfiles as a starting point, oh-my-zsh for the sexy themes and plugins and whatnot and [duffer's](https://github.com/dufferzafar/dotfiles) repo for inspiration, since I've been shamelessly using it for some time.
 
-Holman Dotfiles Ideology:
-
-"If you're interested in the philosophy behind why projects like these are
-awesome, you might want to [read my post on the
-subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/)."
 
 ### Navigating the topical structure
 
@@ -22,7 +17,6 @@ There's a few special files in the hierarchy.
 
 - **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
-- **Brewfile**: This is a list of applications for [Homebrew Cask](http://caskroom.io) to install: things like Chrome and 1Password and Adium and stuff. Might want to edit this file before running any initial setup.
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
   environment.
 - **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
@@ -63,14 +57,11 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
-## bugs(HOLMAN)
 
-I want this to work for everyone; that means when you clone it down it should
-work for you even though you may not have `rbenv` installed, for example. That
-said, I do use this as *my* dotfiles, so there's a good chance I may break
-something if I forget to make a check for a dependency.
+## TODO
 
-If you're brand-new to the project and run into any blockers, please
-[open an issue](https://github.com/holman/dotfiles/issues) on this repository
-and I'd love to get it fixed for you!
-
+* Restructuring Installation Scripts
+* Sublime Text 3 Symlyincing
+* SSH Configs
+* Terminator Configs
+* Dev Environment Tools
