@@ -60,8 +60,7 @@ this script in `bin/`.
 
 ## TODO
 
-* Restructuring Installation Scripts
-* Sublime Text 3 Symlyincing
-* SSH Configs
+* Sublime Text 3 Symlyncing
 * Terminator Configs
 * Dev Environment Tools
+* Configuring proper `autocompletion`
