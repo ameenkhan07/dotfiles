@@ -14,3 +14,15 @@ alias epip="env/bin/pip"
 # Python 3 venv
 alias vpy="venv/bin/python"
 alias vpip="venv/bin/pip"
+
+
+# Create an alias only if the destination exists
+alia () {
+    [[ -f $2 ]] && alias $1=$2
+}
+# Anaconda
+local anaconda=~/.apps/anaconda3/bin
+alia apy  $anaconda/python
+alia apip $anaconda/pip
+alia aipy $anaconda/ipython
+#------------------------------------------------------------#
