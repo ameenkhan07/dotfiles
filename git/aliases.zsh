@@ -2,13 +2,8 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'
-alias gco='git checkout'
 alias gcb='git copy-branch-name'
 alias gac='git add -A && git commit -m'
-
-####################################
-#############DUFFERNAMA#############
-####################################
 alias gai="git add --intent-to-add"
 alias gap="git add -p"
 alias gau="git add -u ."
@@ -26,7 +21,7 @@ alias gcpk="git cherry-pick -n"
 alias gdc="git diff --cached -M"
 alias gf="git fetch "
 alias gfu="git fetch upstream && git rebase upstream/master"
-alias gg="git grep --break --heading --line-number"
+alias gg="git ag --break --heading --line-number"
 # alias gl="git log --date=short --pretty=format:'%C(bold blue)%h%C(reset) %<|(35)%ar %<(70,mtrunc) %s %d'" -n 20
 alias gl="git --no-pager log --date=short --pretty=format:'%C(red)%h%C(reset) - %C(green)%<|(19,trunc)%ar%C(reset)  -   %C(white)%<(80,mtrunc)%s%C(reset) %C(yellow)%<(45,trunc)%d%C(reset)' -n 20"
 # View commits that are not on master (pull request commits!)

@@ -14,11 +14,11 @@ env/
 
 # Python Packages
 *.egg-info/
+*.pyc
 
 # IPython Notebook Checkpoints
 .ipynb_checkpoints
 
-*.pyc
 
 # SBT|Maven Target folders
 target/
