@@ -126,7 +126,7 @@ link_file () {
 }
 
 install_dotfiles () {
-  info 'installing dotfiles'
+  info 'INTALLING DOTFILES'
 
   local overwrite_all=false backup_all=false skip_all=false
 
@@ -141,7 +141,7 @@ setup_gitconfig
 install_dotfiles
 
 # If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]
+if [ "$(uname -s)" == "Linux" ]
 then
   info "installing dependencies"
   if source bin/dot > /tmp/dotfiles-dot 2>&1
