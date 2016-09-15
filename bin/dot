@@ -7,5 +7,5 @@
 export ZSHDOT=$HOME/.dotfiles
 
 # Install software
-echo "› $ZSH/script/install"
+echo "› $ZSHDOT/script/install"
 $ZSHDOT/script/install
