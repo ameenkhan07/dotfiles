@@ -2,6 +2,7 @@
 
 My dotfiles based on [Holman Dotfiles Ideology](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/) uses Holmans dotfiles as a starting point, oh-my-zsh for the sexy themes and plugins and whatnot and [duffer's](https://github.com/dufferzafar/dotfiles) repo for inspiration, since I've been shamelessly using it for some time.
 
+![DOTS](./cestvoila.png)
 
 ### Navigating the topical structure
 
