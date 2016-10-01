@@ -16,7 +16,7 @@
         ui = true
 [core]
 	excludesfile = /home/ameen/.gitignore
-        editor = subl
+	editor = vim
         whitespace = nowarn
 [mergetool]
         keepBackup = false
@@ -30,3 +30,5 @@
         #
         # Setting to git 2.0 default to suppress warning message
         default = simple
+[user]
+	name = ameenkhan07
