@@ -5,7 +5,6 @@ sudo apt-get -y install youtube-dl
 sudo apt-get -y install terminator
 sudo update-alternatives --config x-terminal-emulator
 sudo apt-get -y install screen
-sudo apt-get -y install tmux
 sudo apt-get -y install silversearcher-ag
 sudo apt-get -y install cowsay
 
@@ -14,11 +13,10 @@ sudo apt-get -y install git
 sudo apt-get -y install gitk
 sudo apt-get -y install git-extras
 
-#SSH
+# SSH
 sudo apt-get -y install ssh
-#Keygens for Github
+# Keygens
 ssh-keygen -t rsa -b 4096 -C "ameenkhan07@gmail.com"
-ssh-add ~/.ssh/github.key 
 
 # Node
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
@@ -63,7 +61,7 @@ sudo apt-get -y install unity-tweak-tool
 sudo apt-get -y install zeal
 ## VLC
 sudo apt-get -y install vlc
-# I# Multiscren manager
+# I3 Multiscren manager
 echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get --allow-unauthenticated -y install sur5r-keyring
