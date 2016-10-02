@@ -61,7 +61,8 @@ this script in `bin/`.
 
 ## TODO
 
-* Sublime Text 3 Symlyncing
-* Terminator Configs
-* Dev Environment Tools
-* Configuring proper `autocompletion`
+* Sublime Text 3 Config symlink.
+* Configure proper `autocompletion`
+* vimrc : GOD Mode Level.
+* |Vim | Tmux(inator)| configurations for different environments
+
