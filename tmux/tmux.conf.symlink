@@ -9,8 +9,6 @@ bind - split-window -v -c "#{pane_current_path}"
 unbind '"'
 unbind %
 
-bind-key + resize-pane -R 60
-
 # reload config file (change file location to your the tmux.conf you want to use)
 bind r source-file ~/.tmux.conf \; display-message "Config reloaded..."
 
@@ -19,6 +17,27 @@ bind -n M-Left select-pane -L
 bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
+
+# reorder Tmux Windows
+bind-key -n S-Left swap-window -t -1
+bind-key -n S-Right swap-window -t +1
+
+# jump to last window
+bind-key C-a last-window
+
+# Set window name to the current directory name.
+bind C-p run -b "tmux rename-window $(basename #{pane_current_path})"
+
+# better window management
+unbind c
+bind c run "(tmux new-window -c #{pane_current_path} -n $(basename #{pane_current_path}))"
+
+# Start windows and panes at 1, not 0
+set -g base-index 1
+setw -g pane-base-index 1
+
+# Time tmux waits while intercepting escape key.
+set -sg escape-time 0
 
 # Normally next-layout, which is a pathological custom-layout murderer.
 unbind-key Space
@@ -100,15 +119,17 @@ set -g message-attr bold
 set -g message-fg colour232
 set -g message-bg colour166
 
+# better window name management
+bind , command-prompt "rename-window '%%'"
+bind > run-shell "tmux rename-window `basename #{pane_current_path}`"
+
+
 # Config
 
 set -g set-titles on
 set -g set-titles-string "#T"
 
 set -g default-terminal "screen-256color"
-
-# Time tmux waits while intercepting escape key.
-set -sg escape-time 0
 
 # Time tmux waits for repeated commands.
 # e.g. "C-a right right" to switch across two panes.
@@ -121,3 +142,4 @@ set-option -g visual-bell on
 set-option -g visual-silence on
 set-window-option -g monitor-activity on
 set-option -g bell-action none
+

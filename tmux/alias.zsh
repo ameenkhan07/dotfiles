@@ -14,5 +14,6 @@ alias txks='tmux kill-session -t'
 
 alias txrn='tmuxinator new'
 alias txro='tmuxinator open'
+alias txrs='tmuxinator start'
 
 
