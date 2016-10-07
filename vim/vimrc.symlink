@@ -42,7 +42,7 @@ filetype plugin indent on    " required
 " NerdTree Toggle On Ctrl-n
 map <C-n> :NERDTreeToggle<CR>
 
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 
 " Navigation between splits
 nnoremap <C-J> <C-W><C-J>
@@ -77,7 +77,6 @@ let g:SimpylFold_docstring_preview=1
     
 
 " Highlight Bad Whitespace, trailing
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " Auto-Complete
 let g:ycm_autoclose_preview_window_after_completion=1
