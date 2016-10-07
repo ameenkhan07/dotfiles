@@ -37,6 +37,7 @@ function extract () {
             *.pax.Z)    uncompress $1 --stdout | pax -r     ;;
             *.rar)      unrar x $1                          ;;
             *.Z)        uncompress $1                       ;;
+            *.tar.bz)   tar -xvf $1                         ;;
             *)          echo "'$1' cannot be extracted/mounted via extract()" ;;
         esac
     else
