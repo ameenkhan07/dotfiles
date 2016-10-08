@@ -61,8 +61,8 @@ this script in `bin/`.
 
 ## TODO
 
-* Sublime Text 3 Config symlink.
-* Configure proper `autocompletion`
-* vimrc : GOD Mode Level.
-* |Vim | Tmux(inator)| configurations for different environments
-
+- Hugo hotkey commands 
+- Sublime Text 3 config `symlinks`.
+- Configure proper `autocompletion`
+- `vimrc` : GOD Mode Level.
+- `Vim | Tmux(inator)`  configurations for different environments
