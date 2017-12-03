@@ -141,7 +141,7 @@ setup_gitconfig
 install_dotfiles
 
 # If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Linux" ]
+if [ "$(uname -s)" == "Darwin" ]
 then
   info "installing dependencies"
   if source bin/dot > /tmp/dotfiles-dot 2>&1
@@ -150,7 +150,15 @@ then
   else
     fail "error installing dependencies"
   fi
+
+  # Stupid brew unhandled dependencies
+  # https://stackoverflow.com/questions/16432071/how-to-fix-homebrew-permissions
+  mkdir -p /usr/local/include
+  mkdir -p /usr/local/Frameworks
+  sudo chown -R $(whoami):admin /usr/local/*
+
 fi
+
 
 echo ''
 echo '  All installed!'

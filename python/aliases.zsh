@@ -20,9 +20,3 @@ alias vpip="venv/bin/pip"
 alia () {
     [[ -f $2 ]] && alias $1=$2
 }
-# Anaconda
-local anaconda=~/.apps/anaconda3/bin
-alia apy  $anaconda/python
-alia apip $anaconda/pip
-alia aipy $anaconda/ipython
-#------------------------------------------------------------#

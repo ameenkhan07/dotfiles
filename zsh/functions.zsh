@@ -56,6 +56,17 @@ function s() {
   fi;
 }
 
+# `o` with no arguments opens the current directory, otherwise opens the given
+# location
+function o() {
+  if [ $# -eq 0 ]; then
+    open .;
+  else
+    open "$@";
+  fi;
+}
+
+
 
 # Create a new directory and enter it
 function mkd () {
@@ -107,44 +118,6 @@ function hserver() {
   python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port";
 }
 
-
-# Google from the command-line
-function google() {
-    search=""
-    echo "Googling: $@"
-    for term in "$@"; do
-        search="$search%20$term"
-    done
-    xdg-open "http://www.google.com/search?q=$search"
-}
-
-
-# Learn about a random command.
-# Inspired: http://askubuntu.com/a/337382/415634
-function bored() {
-    cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1 | cut -d. -f1) $(whatis $(ls /bin | shuf -n 1) 2>/dev/null)
-}
-
-#-----------------------------------------------------------------------------#
-#------------------------------Key Bindings-----------------------------------#
-#-----------------------------------------------------------------------------#
-
-
-# Open the current folder in user's preferred
-# file browser
-# Todo: Find a way of focussing the browser too!
-function ctrl-enter () {
-  if [[ -z $BUFFER ]]; then
-    xdg-open .
-  else
-    xdg-open "$BUFFER"
-    zle redisplay
-  fi
-}
-zle -N ctrl-enter
-bindkey "^J" ctrl-enter
-
-
 # Enter binding to git status|ls
 # Pressing enter in a git directory runs `git status`
 # in other directories `ls`
@@ -163,3 +136,31 @@ function ls-git_status () {
 }
 zle -N ls-git_status
 bindkey "^M" ls-git_status
+
+
+
+# Determine size of a file or total size of a directory
+function fs() {
+  if du -b /dev/null > /dev/null 2>&1; then
+    local arg=-sbh;
+  else
+    local arg=-sh;
+  fi
+  if [[ -n "$@" ]]; then
+    du $arg -- "$@";
+  else
+    du $arg .[^.]* ./*;
+  fi;
+}
+
+
+
+# Syntax-highlight JSON strings or files
+# Usage: `json '{"foo":42}'` or `echo '{"foo":42}' | json`
+function json() {
+  if [ -t 0 ]; then # argument
+    python -mjson.tool <<< "$*" | pygmentize -l javascript;
+  else # pipe
+    python -mjson.tool | pygmentize -l javascript;
+  fi;
+}

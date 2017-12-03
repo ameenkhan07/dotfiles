@@ -5,10 +5,17 @@
         protocol = https
 [alias]
         co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributors = !$ZSH/bin/git-rank-contributors
-        count   = !git shortlog -sn
+        promote = !$DOTFILES/bin/git-promote
+        wtf     = !$DOTFILES/bin/git-wtf
+        # Amend the currently staged files to the latest commit
+        amend = commit --amend --reuse-message=HEAD
+        # Credit an author on the latest commit
+        credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+        # Remove branches that have already been merged with master
+        # a.k.a. ‘delete merged’
+        dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+        # List contributors with number of commits
+        contributors = shortlog --summary --numbered
 [color]
         diff = auto
         status = auto

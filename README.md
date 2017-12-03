@@ -1,6 +1,7 @@
 # Dotfiles Source
 
-My dotfiles based on [Holman Dotfiles Ideology](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/) uses Holmans dotfiles as a starting point, oh-my-zsh for the sexy themes and plugins and whatnot and [duffer's](https://github.com/dufferzafar/dotfiles) repo for inspiration, since I've been shamelessly using it for some time.
+My dotfiles, based on **the** [Holman Dotfiles Ideology](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/), uses *Holman's* dots as a starting point, *oh-my-zsh* for the sexy themes/plugins and [*duffer's*](https://github.com/dufferzafar/dotfiles) heedfully curated tidbits from all the other dotfiles. 
+Special mention to [*Mathias's* dotfiles](https://github.com/mathiasbynens/dotfiles).
 
 ![DOTS](./cestvoila.png)
 
@@ -28,18 +29,11 @@ There's a few special files in the hierarchy.
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
+- **Brewfile**: One file to rule them all. Installs all dev/UI tools to be required, all packaged neatly in a file.
 
 ## Installing the dotfiles repo
 
-Run these:
-
-```sh
-sudo apt-get install zsh
-chsh -s $(which zsh) 
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-```
-
-This will install the [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+To Setup macos:
 
 ```sh
 git clone https://github.com/ameenkhan07/dotfiles.git ~/.dotfiles
@@ -50,19 +44,16 @@ script/bootstrap
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
 
-The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
-which sets up a few paths that'll be different on your particular machine.
-
 `dot` is a simple script that installs some dependencies, sets sane macOS
 defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
+```
 
 ## TODO
 
 - Hugo hotkey commands 
-- Sublime Text 3 config `symlinks`.
-- Configure proper `autocompletion`
+- Sublime Text 3 config `symlinks`
 - `vimrc` : GOD Mode Level.
 - `Vim | Tmux(inator)`  configurations for different environments

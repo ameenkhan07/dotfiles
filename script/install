@@ -6,5 +6,21 @@ set -e
 
 cd "$(dirname $0)"/.. 	
 
+# Command Line Tools go first
+# Command Line Tools go first
+xcode-select --install
+
+# Run Homebrew through the Brewfile
+echo "› brew bundle"
+brew bundle
+
+# OH MY ZSH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/plugins/zsh-autosuggestions
+
+# OH MY ZSH FONT for POWERLINE THEME
+git clone https://github.com/powerline/fonts.git --depth=1
+fonts/install.sh && rm -rf fonts
+
 # find the installers and run them iteratively
 sudo find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
