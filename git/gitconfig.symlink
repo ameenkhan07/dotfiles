@@ -22,7 +22,7 @@
         branch = auto
         ui = true
 [core]
-	excludesfile = /home/ameen/.gitignore
+	excludesfile = /Users/ameen/.gitignore_global
 	editor = vim
         whitespace = nowarn
 [mergetool]
@@ -38,4 +38,13 @@
         # Setting to git 2.0 default to suppress warning message
         default = simple
 [user]
-	name = ameenkhan07
+	name = ameenkhna07
+	email = ameenkhan07@gmail.com
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/ameen/.stCommitMsg
