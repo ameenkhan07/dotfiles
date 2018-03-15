@@ -1,6 +1,8 @@
 # Reload the shell
 alias reload="exec ${SHELL} -l"
 
+# Custom LIST
+alias lk="ls -lartFh"
 # Ranger File browser
 alias r="ranger"
 
