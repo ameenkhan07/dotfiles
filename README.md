@@ -38,7 +38,7 @@ To Setup macos:
 ```sh
 git clone https://github.com/ameenkhan07/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-script/bootstrap
+sh ./script/bootstrap
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
