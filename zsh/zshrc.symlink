@@ -2,7 +2,7 @@
 export DOTFILES=$HOME/.dotfiles
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster"
-plugins=(pip  common-aliases jsondata celery pep8 httpie python zsh-autosuggestions pylint pyenv terminator colored-man zsh-syntax-highlighting  wd command-not-found)
+plugins=(pip  common-aliases jsondata celery pep8 httpie python zsh-autosuggestions pylint pyenv terminator colored-man zsh-syntax-highlighting  wd command-not-found, magic-enter)
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/dev
