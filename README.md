@@ -53,7 +53,7 @@ this script in `bin/`.
 
 ## TODO
 
-- Hugo hotkey commands 
-- Sublime Text 3 config `symlinks`
+- Iterm2 profile `symlinks`
+- VSCode profile `symlinks`
+- Configure Powerlevel9k
 - `vimrc` : GOD Mode Level.
-- `Vim | Tmux(inator)`  configurations for different environments

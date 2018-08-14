@@ -25,5 +25,8 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 git clone https://github.com/powerline/fonts.git --depth=1
 fonts/install.sh && rm -rf fonts
 
+# Iterm Themes
+git clone https://github.com/mbadolato/iTerm2-Color-Schemes
+
 # find the installers and run them iteratively
 sudo find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
