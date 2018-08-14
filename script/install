@@ -7,9 +7,7 @@ set -e
 cd "$(dirname $0)"/.. 	
 
 # Command Line Tools go first
-# Command Line Tools go first
 xcode-select --install
-
 # Run Homebrew through the Brewfile
 echo "› brew bundle"
 brew bundle
