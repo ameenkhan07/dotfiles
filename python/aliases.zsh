@@ -1,11 +1,12 @@
 # Python
-alias py="python"
+alias py="python3"
 alias py2="python2"
 alias py3="python3"
 alias ptpy="ptpython"
 
 # Virtualenv
-alias venv="virtualenv"
+alias venv="virtualenv -p python3.7"
+alias venv2="virtualenv -p python2.7"
 
 # Python 2 venv
 alias eac="source env/bin/activate"

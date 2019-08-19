@@ -16,7 +16,7 @@ alias gau="git add -u ."
 alias gc='git commit'
 alias gca='git commit -a'
 alias gcm="git commit -v --amend"
-
+alias gstat="git-quick-stats"
 
 # Playing with git branchesß
 alias gcb='git copy-branch-name'
