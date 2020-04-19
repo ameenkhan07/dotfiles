@@ -7,6 +7,10 @@
 *.sublime-project
 *.sublime-workspace
 
+# VSCODE
+.vscode/*
+*.code-workspace
+
 ## Python
 
 # Byte-compiled / optimized / DLL files

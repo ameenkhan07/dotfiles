@@ -25,6 +25,7 @@
 	excludesfile = /Users/ameen/.gitignore_global
 	editor = vim
         whitespace = nowarn
+	askpass = git-gui--askpass
 [mergetool]
         keepBackup = false
 [difftool]
@@ -48,3 +49,8 @@
 	trustExitCode = true
 [commit]
 	template = /Users/ameen/.stCommitMsg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
